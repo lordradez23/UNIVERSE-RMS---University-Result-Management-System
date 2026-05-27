@@ -37,22 +37,22 @@ export default function Home() {
         <div className="absolute inset-0 z-0 texture-noise" />
 
         <section className="relative z-10 mx-auto flex max-w-6xl flex-col items-center justify-center px-6 py-20 text-center md:py-32">
-          <div className="animate-fade-in space-y-8">
-            <h1 className="text-gradient text-6xl font-extrabold tracking-tighter sm:text-8xl leading-[1.1] md:leading-[1.1]">
+          <div className="animate-fade-in space-y-6">
+            <h1 className="text-gradient text-5xl font-extrabold tracking-tighter sm:text-7xl leading-[1.1] md:leading-[1.1]">
               Management. <br /> Redefined for Excellence.
             </h1>
-            <p className="mx-auto max-w-2xl text-lg text-neutral-400 md:text-xl font-medium leading-relaxed">
+            <p className="mx-auto max-w-2xl text-base text-neutral-400 md:text-lg font-medium leading-relaxed">
               Experience the pinnacle of university result management. Secure, intuitive, 
               and lightning-fast systems built for the modern academic world.
             </p>
-            <div className="flex flex-col justify-center gap-6 sm:flex-row pt-4">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row pt-4">
               <Link href="/login">
-                <Button size="lg" className="h-16 px-12 text-lg shadow-2xl shadow-white/5">
-                  Access Portal <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" className="h-12 px-10 text-sm shadow-2xl shadow-white/5">
+                  Access Portal <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/register">
-                <Button size="lg" variant="outline" className="h-16 px-12 text-lg">
+                <Button size="lg" variant="outline" className="h-12 px-10 text-sm">
                   Institutional Setup
                 </Button>
               </Link>
@@ -147,66 +147,66 @@ export default function Home() {
         </section>
 
         {/* Tailored Experiences Section */}
-        <section className="mx-auto max-w-7xl px-6 py-24 md:py-32 border-t border-white/5">
-          <div className="mb-16 max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-5xl mb-6">Purpose-built for every role.</h2>
-            <p className="text-lg text-neutral-400 leading-relaxed">
+        <section className="mx-auto max-w-7xl px-6 py-24 border-t border-white/5">
+          <div className="mb-12 max-w-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-white mb-4">Purpose-built for every role.</h2>
+            <p className="text-base text-neutral-400 leading-relaxed">
               UNIVERSE RMS is not a one-size-fits-all solution. Our platform adapts its interface dynamically, offering specialized portals designed to maximize efficiency for students, educators, and administrators alike.
             </p>
           </div>
-          <div className="grid gap-8 lg:grid-cols-3">
-            <div className="glass-card p-10 rounded-3xl border border-white/10 background-noise">
-              <BookOpen className="h-10 w-10 text-white mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Student Portal</h3>
-              <p className="text-neutral-400">Visualize academic progress with intuitive results tables, grade-aware indicators, and instant access to performance analytics across semesters.</p>
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="glass-card p-8 rounded-3xl border border-white/10 background-noise">
+              <BookOpen className="h-8 w-8 text-white mb-5" />
+              <h3 className="text-xl font-bold text-white mb-3">Student Portal</h3>
+              <p className="text-sm text-neutral-400">Visualize academic progress with intuitive results tables, grade-aware indicators, and instant access to performance analytics across semesters.</p>
             </div>
-            <div className="glass-card p-10 rounded-3xl border border-white/10">
-              <Users className="h-10 w-10 text-white mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Lecturer Dashboard</h3>
-              <p className="text-neutral-400">Streamline your workflow with effortless result uploads, bulk processing capabilities, and built-in validation for secure grade entry.</p>
+            <div className="glass-card p-8 rounded-3xl border border-white/10">
+              <Users className="h-8 w-8 text-white mb-5" />
+              <h3 className="text-xl font-bold text-white mb-3">Lecturer Dashboard</h3>
+              <p className="text-sm text-neutral-400">Streamline your workflow with effortless result uploads, bulk processing capabilities, and built-in validation for secure grade entry.</p>
             </div>
-            <div className="glass-card p-10 rounded-3xl border border-white/10">
-              <Database className="h-10 w-10 text-white mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Admin Panel</h3>
-              <p className="text-neutral-400">Maintain complete system oversight with real-time analytics, user account management, and global record monitoring tools.</p>
+            <div className="glass-card p-8 rounded-3xl border border-white/10">
+              <Database className="h-8 w-8 text-white mb-5" />
+              <h3 className="text-xl font-bold text-white mb-3">Admin Panel</h3>
+              <p className="text-sm text-neutral-400">Maintain complete system oversight with real-time analytics, user account management, and global record monitoring tools.</p>
             </div>
           </div>
         </section>
 
         {/* Technical Stack Section */}
-        <section className="relative w-full border-y border-white/5 bg-white/[0.02] py-24 md:py-32">
+        <section className="relative w-full border-y border-white/5 bg-white/[0.02] py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-5xl mb-6">Uncompromising architecture.</h2>
-                <p className="text-lg text-neutral-400 mb-8 leading-relaxed">
+                <h2 className="text-3xl font-bold tracking-tight text-white mb-4">Uncompromising architecture.</h2>
+                <p className="text-base text-neutral-400 mb-8 leading-relaxed">
                   Engineered using the absolute latest web technologies. We prioritized zero-latency data transfers, bulletproof authentication lifecycles, and a responsive application skeleton that feels entirely native.
                 </p>
                 <div className="space-y-6">
                   <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl glass">
-                      <Layers className="h-6 w-6 text-white" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl glass">
+                      <Layers className="h-5 w-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-bold text-white">Next.js 15 & App Router</h4>
+                      <h4 className="text-base font-bold text-white">Next.js 15 & App Router</h4>
                       <p className="text-sm text-neutral-400 mt-1">Leveraging React Server Components for unparalleled speed and SEO optimization.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl glass">
-                      <ShieldCheck className="h-6 w-6 text-white" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl glass">
+                      <ShieldCheck className="h-5 w-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-bold text-white">Advanced JWT Lifecycle</h4>
+                      <h4 className="text-base font-bold text-white">Advanced JWT Lifecycle</h4>
                       <p className="text-sm text-neutral-400 mt-1">Automatic token management with secure foreground interceptors and background logic.</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl glass">
-                      <Cpu className="h-6 w-6 text-white" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl glass">
+                      <Cpu className="h-5 w-5 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-bold text-white">Strict Type Safety</h4>
+                      <h4 className="text-base font-bold text-white">Strict Type Safety</h4>
                       <p className="text-sm text-neutral-400 mt-1">End-to-end TypeScript enforcement ensuring zero runtime data malformations.</p>
                     </div>
                   </div>
@@ -266,19 +266,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="mx-auto max-w-4xl px-6 py-32 text-center">
-          <h2 className="text-4xl font-extrabold tracking-tight text-white md:text-6xl mb-8">
+        <section className="mx-auto max-w-4xl px-6 py-24 text-center">
+          <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-5xl mb-6">
             Deploy the gold standard in academic management.
           </h2>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row mt-10">
+          <div className="flex flex-col justify-center gap-4 sm:flex-row mt-8">
             <Link href="/register">
-              <Button size="lg" className="h-14 px-10 text-base shadow-2xl shadow-white/10 w-full sm:w-auto">
+              <Button size="lg" className="h-12 px-8 text-sm shadow-2xl shadow-white/10 w-full sm:w-auto">
                 Begin Setup Process
               </Button>
             </Link>
             <Link href="/login">
-              <Button size="lg" variant="outline" className="h-14 px-10 text-base w-full sm:w-auto hover:bg-white hover:text-black transition-all">
+              <Button size="lg" variant="outline" className="h-12 px-8 text-sm w-full sm:w-auto hover:bg-white hover:text-black transition-all">
                 Access Live Demo
               </Button>
             </Link>
@@ -347,10 +346,10 @@ export default function Home() {
 function FeatureCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
   return (
     <div className="glass-card p-10 rounded-3xl flex flex-col items-center text-center group hover:bg-white/[0.07] border border-white/5 transition-all duration-300">
-      <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-black group-hover:scale-110 shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-transform duration-500">
+      <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-black group-hover:scale-110 shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-transform duration-500">
         {icon}
       </div>
-      <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">{title}</h3>
+      <h3 className="text-lg font-bold text-white mb-3 tracking-tight">{title}</h3>
       <p className="text-neutral-400 leading-relaxed text-sm">{description}</p>
     </div>
   );
