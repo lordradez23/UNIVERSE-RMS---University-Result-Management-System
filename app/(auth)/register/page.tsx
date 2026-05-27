@@ -9,7 +9,7 @@ import { Card, CardTitle, CardDescription } from "@/components/ui/Card";
 import api from "@/components/shared/api";
 import { UserRole } from "@/types";
 import axios from "axios";
-
+import { ArrowLeft } from "lucide-react";
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -41,8 +41,15 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-neutral-50 px-4">
-      <div className="w-full max-w-md">
+    <div className="flex min-h-screen items-center justify-center bg-neutral-50 px-4 relative">
+      <div className="absolute top-6 left-6">
+        <Link href="/">
+          <Button variant="ghost" className="text-neutral-500 hover:text-neutral-900 border border-transparent hover:border-neutral-200 bg-white shadow-sm hover:shadow">
+            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
+          </Button>
+        </Link>
+      </div>
+      <div className="w-full max-w-md py-12">
         <Card>
           <div className="mb-8 text-center">
             <CardTitle className="text-3xl">Create Account</CardTitle>

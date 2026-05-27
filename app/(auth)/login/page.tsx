@@ -9,7 +9,7 @@ import { Card, CardTitle, CardDescription } from "@/components/ui/Card";
 import { useAuth } from "@/components/shared/auth-context";
 import api from "@/components/shared/api";
 import axios from "axios";
-
+import { ArrowLeft } from "lucide-react";
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -39,7 +39,14 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-neutral-50 px-4">
+    <div className="flex min-h-screen items-center justify-center bg-neutral-50 px-4 relative">
+      <div className="absolute top-6 left-6">
+        <Link href="/">
+          <Button variant="ghost" className="text-neutral-500 hover:text-neutral-900 border border-transparent hover:border-neutral-200 bg-white shadow-sm hover:shadow">
+            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
+          </Button>
+        </Link>
+      </div>
       <div className="w-full max-w-md">
         <Card>
           <div className="mb-8 text-center">

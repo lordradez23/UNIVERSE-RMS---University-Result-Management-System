@@ -147,7 +147,7 @@ export default function Home() {
         </section>
 
         {/* Tailored Experiences Section */}
-        <section className="mx-auto max-w-7xl px-6 py-24 border-t border-white/5">
+        <section id="university" className="mx-auto max-w-7xl px-6 py-24 border-t border-white/5">
           <div className="mb-12 max-w-3xl">
             <h2 className="text-2xl font-bold tracking-tight text-white mb-4">Purpose-built for every role.</h2>
             <p className="text-base text-neutral-400 leading-relaxed">
@@ -174,7 +174,7 @@ export default function Home() {
         </section>
 
         {/* Technical Stack Section */}
-        <section className="relative w-full border-y border-white/5 bg-white/[0.02] py-20 md:py-24">
+        <section id="security" className="relative w-full border-y border-white/5 bg-white/[0.02] py-20 md:py-24">
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
               <div>
