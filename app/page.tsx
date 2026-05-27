@@ -6,25 +6,25 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
       {/* Premium Navbar */}
-      <header className="fixed top-0 z-50 w-full px-6 py-6 transition-all duration-300 md:px-20">
-        <div className="mx-auto flex max-w-7xl items-center justify-between glass rounded-full px-8 py-3">
-          <div className="flex items-center gap-3">
-            <div className="bg-white rounded-xl p-2">
-              <GraduationCap className="h-6 w-6 text-black" />
+      <header className="fixed top-0 z-50 w-full px-4 sm:px-6 py-4 sm:py-6 transition-all duration-300 md:px-20">
+        <div className="mx-auto flex max-w-7xl items-center justify-between glass rounded-full px-4 sm:px-8 py-3">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="bg-white rounded-xl p-1.5 sm:p-2 hidden sm:block">
+              <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6 text-black" />
             </div>
-            <span className="text-xl font-bold tracking-tighter text-white">UNIVERSE RMS</span>
+            <span className="text-lg sm:text-xl font-bold tracking-tighter text-white whitespace-nowrap">UNIVERSE RMS</span>
           </div>
           <nav className="hidden gap-10 md:flex">
             <Link href="#features" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">Features</Link>
             <Link href="#security" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">Security</Link>
             <Link href="#university" className="text-sm font-medium text-neutral-400 hover:text-white transition-colors">Institutions</Link>
           </nav>
-          <div className="flex gap-6">
+          <div className="flex gap-2 sm:gap-6 items-center">
             <Link href="/login">
-              <Button variant="ghost" className="text-neutral-400 hover:text-white">Sign In</Button>
+              <Button variant="ghost" className="text-neutral-400 hover:text-white px-2 sm:px-4 text-xs sm:text-sm">Sign In</Button>
             </Link>
             <Link href="/register">
-              <Button size="md">Get Started</Button>
+              <Button size="md" className="px-3 sm:px-6 h-8 sm:h-10 text-xs sm:text-sm">Get Started</Button>
             </Link>
           </div>
         </div>
@@ -36,23 +36,23 @@ export default function Home() {
         <div className="absolute inset-0 z-0 texture-grid" />
         <div className="absolute inset-0 z-0 texture-noise" />
 
-        <section className="relative z-10 mx-auto flex max-w-6xl flex-col items-center justify-center px-6 py-20 text-center md:py-32">
-          <div className="animate-fade-in space-y-6">
-            <h1 className="text-gradient text-5xl font-extrabold tracking-tighter sm:text-7xl leading-[1.1] md:leading-[1.1]">
-              Management. <br /> Redefined for Excellence.
+        <section className="relative z-10 mx-auto flex max-w-6xl flex-col items-center justify-center px-4 sm:px-6 py-16 text-center md:py-32 w-full">
+          <div className="animate-fade-in space-y-6 w-full">
+            <h1 className="text-gradient text-4xl sm:text-5xl font-extrabold tracking-tighter md:text-7xl leading-[1.1] md:leading-[1.1] break-words">
+              Management. <br className="hidden sm:block" /> Redefined for Excellence.
             </h1>
-            <p className="mx-auto max-w-2xl text-base text-neutral-400 md:text-lg font-medium leading-relaxed">
+            <p className="mx-auto max-w-2xl text-sm sm:text-base text-neutral-400 md:text-lg font-medium leading-relaxed px-2">
               Experience the pinnacle of university result management. Secure, intuitive, 
               and lightning-fast systems built for the modern academic world.
             </p>
-            <div className="flex flex-col justify-center gap-4 sm:flex-row pt-4">
-              <Link href="/login">
-                <Button size="lg" className="h-12 px-10 text-sm shadow-2xl shadow-white/5">
+            <div className="flex flex-col items-center justify-center gap-3 sm:gap-4 sm:flex-row pt-4 w-full px-2 sm:px-0">
+              <Link href="/login" className="w-full sm:w-auto">
+                <Button size="lg" className="h-12 w-full sm:w-auto px-10 text-sm shadow-2xl shadow-white/5">
                   Access Portal <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/register">
-                <Button size="lg" variant="outline" className="h-12 px-10 text-sm">
+              <Link href="/register" className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="h-12 w-full sm:w-auto px-10 text-sm">
                   Institutional Setup
                 </Button>
               </Link>
@@ -60,12 +60,12 @@ export default function Home() {
           </div>
 
           {/* Floating UI Elements Preview */}
-          <div className="relative mt-24 w-full max-w-5xl px-4 animate-float">
-            <div className="glass-card w-full relative overflow-hidden rounded-3xl border border-white/5 bg-black/40">
+          <div className="relative mt-16 sm:mt-24 w-full max-w-5xl px-0 sm:px-4 animate-float">
+            <div className="glass-card w-full relative overflow-hidden sm:rounded-3xl border-y sm:border border-white/5 bg-black/40">
               {/* Fake UI Content */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent" />
-              <div className="p-8 flex flex-col gap-6 relative z-10">
-                <div className="flex items-center justify-between border-b border-white/5 pb-6">
+              <div className="p-4 sm:p-8 flex flex-col gap-6 relative z-10">
+                <div className="flex items-center justify-between border-b border-white/5 pb-4 sm:pb-6">
                   <div className="flex items-center gap-3">
                     <div className="h-2 w-2 rounded-full bg-white animate-pulse" />
                     <div className="text-[10px] font-mono tracking-widest text-white/50 uppercase">Live System Feed</div>
@@ -77,17 +77,17 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
                   {[
                     { label: "Active Students", value: "8,492", w: "w-[85%]" },
                     { label: "Processed Results", value: "34.2M", w: "w-[60%]" },
                     { label: "System Load", value: "1.2%", w: "w-[12%]" },
                     { label: "Network status", value: "Secure", w: "w-[100%]" }
                   ].map((stat, i) => (
-                    <div key={i} className="h-24 glass rounded-2xl p-4 flex flex-col justify-between relative overflow-hidden group border border-white/5 bg-white/[0.01]">
+                    <div key={i} className="h-20 sm:h-24 glass rounded-2xl p-3 sm:p-4 flex flex-col justify-between relative overflow-hidden group border border-white/5 bg-white/[0.01]">
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.08] to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]" />
-                      <div className="text-[10px] text-neutral-500 font-mono uppercase tracking-widest">{stat.label}</div>
-                      <div className="text-2xl font-bold text-white tracking-tight">{stat.value}</div>
+                      <div className="text-[9px] sm:text-[10px] text-neutral-500 font-mono uppercase tracking-widest truncate">{stat.label}</div>
+                      <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">{stat.value}</div>
                       <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden mt-1">
                          <div className={`h-full bg-white opacity-90 ${stat.w}`} />
                       </div>
@@ -95,22 +95,22 @@ export default function Home() {
                   ))}
                 </div>
                 
-                <div className="h-48 glass rounded-2xl p-6 relative overflow-hidden border border-white/5 bg-white/[0.01]">
-                  <div className="text-[10px] text-neutral-500 font-mono uppercase tracking-widest mb-6 border-b border-white/5 pb-3">Recent Transaction Log</div>
-                  <div className="space-y-4">
+                <div className="h-40 sm:h-48 glass rounded-2xl p-4 sm:p-6 relative overflow-hidden border border-white/5 bg-white/[0.01]">
+                  <div className="text-[10px] text-neutral-500 font-mono uppercase tracking-widest mb-4 border-b border-white/5 pb-3">Recent Transaction Log</div>
+                  <div className="space-y-3 sm:space-y-4">
                     {[
                       { id: "0xA92B...4F12", status: "Verified", time: "Just now", opacity: "opacity-100" },
                       { id: "0xC71A...9B34", status: "Processed", time: "2s ago", opacity: "opacity-70" },
                       { id: "0x2F88...E19C", status: "Encrypted", time: "5s ago", opacity: "opacity-40" }
                     ].map((log, i) => (
                       <div key={i} className={`flex justify-between items-center ${log.opacity}`}>
-                         <div className="flex gap-4 items-center">
+                         <div className="flex gap-2 sm:gap-4 items-center">
                            <div className="w-1.5 h-1.5 rounded-full bg-white/80" />
-                           <span className="text-sm text-neutral-300 font-mono tracking-tight">{log.id}</span>
+                           <span className="text-xs sm:text-sm text-neutral-300 font-mono tracking-tight">{log.id}</span>
                          </div>
-                         <div className="flex gap-6 items-center">
-                           <span className="text-[10px] text-neutral-400 uppercase tracking-widest">{log.status}</span>
-                           <span className="text-[10px] text-neutral-600 font-mono w-16 text-right">{log.time}</span>
+                         <div className="flex gap-2 sm:gap-6 items-center">
+                           <span className="text-[9px] sm:text-[10px] text-neutral-400 uppercase tracking-widest hidden xs:block">{log.status}</span>
+                           <span className="text-[9px] sm:text-[10px] text-neutral-600 font-mono w-12 sm:w-16 text-right whitespace-nowrap">{log.time}</span>
                          </div>
                       </div>
                     ))}
@@ -126,8 +126,8 @@ export default function Home() {
         </section>
 
         {/* Feature Grid */}
-        <section id="features" className="mx-auto max-w-7xl px-6 py-32">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <section id="features" className="mx-auto max-w-7xl px-4 sm:px-6 py-20 sm:py-32">
+          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <FeatureCard 
               icon={<UserCheck className="h-6 w-6" />}
               title="Identity First"
@@ -147,8 +147,8 @@ export default function Home() {
         </section>
 
         {/* Tailored Experiences Section */}
-        <section id="university" className="mx-auto max-w-7xl px-6 py-24 border-t border-white/5 relative z-10">
-          <div className="mb-16 max-w-3xl">
+        <section id="university" className="mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-24 border-t border-white/5 relative z-10 w-full overflow-hidden">
+          <div className="mb-12 sm:mb-16 max-w-3xl">
             <h2 className="text-3xl font-extrabold tracking-tight text-white mb-5">Purpose-built for every role.</h2>
             <p className="text-base text-neutral-400 leading-relaxed md:text-lg max-w-2xl">
               UNIVERSE RMS is not a one-size-fits-all solution. Our platform adapts its interface dynamically, offering specialized portals designed to maximize efficiency for students, educators, and administrators alike.
@@ -176,11 +176,11 @@ export default function Home() {
         </section>
 
         {/* Technical Stack Section */}
-        <section id="security" className="relative w-full border-y border-white/5 bg-white/[0.02] py-20 md:py-24">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
+        <section id="security" className="relative w-full border-y border-white/5 bg-white/[0.02] py-16 md:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+            <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 lg:items-center">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white mb-4">Uncompromising architecture.</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-4">Uncompromising architecture.</h2>
                 <p className="text-base text-neutral-400 mb-8 leading-relaxed">
                   Engineered using the absolute latest web technologies. We prioritized zero-latency data transfers, bulletproof authentication lifecycles, and a responsive application skeleton that feels entirely native.
                 </p>
@@ -244,17 +244,17 @@ export default function Home() {
                   </div>
                   
                   {/* Connection Nodes */}
-                  <div className="mt-auto w-full pt-8 border-t border-white/5 flex items-center justify-between text-[10px] uppercase tracking-widest font-mono text-neutral-500">
-                     <div className="flex items-center gap-3">
-                       <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                  <div className="mt-auto w-full pt-8 border-t border-white/5 flex items-center justify-between text-[8px] sm:text-[10px] uppercase tracking-widest font-mono text-neutral-500">
+                     <div className="flex items-center gap-2 sm:gap-3">
+                       <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full bg-white animate-pulse" />
                        Client Node
                      </div>
-                     <div className="flex-1 px-6 flex items-center justify-center relative overflow-hidden">
+                     <div className="flex-1 px-3 sm:px-6 flex items-center justify-center relative overflow-hidden">
                         <div className="w-full h-px bg-white/10" />
                         <div className="absolute w-full h-px bg-white/50 -translate-x-full animate-[shimmer_2s_infinite]" />
                      </div>
-                     <div className="flex items-center gap-3">
-                       <div className="w-2 h-2 rounded-full border border-white/40" />
+                     <div className="flex items-center gap-2 sm:gap-3">
+                       <div className="w-1.5 sm:w-2 h-1.5 sm:h-2 rounded-full border border-white/40" />
                        Core Server
                      </div>
                   </div>
@@ -268,18 +268,18 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-4xl px-6 py-24 text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight text-white md:text-5xl mb-6">
+        <section className="mx-auto max-w-4xl px-4 sm:px-6 py-16 sm:py-24 text-center">
+          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white md:text-5xl mb-6">
             Deploy the gold standard in academic management.
           </h2>
-          <div className="flex flex-col justify-center gap-4 sm:flex-row mt-8">
-            <Link href="/register">
-              <Button size="lg" className="h-12 px-8 text-sm shadow-2xl shadow-white/10 w-full sm:w-auto">
+          <div className="flex flex-col justify-center gap-3 sm:gap-4 sm:flex-row mt-8">
+            <Link href="/register" className="w-full sm:w-auto">
+              <Button size="lg" className="h-12 px-8 text-sm shadow-2xl shadow-white/10 w-full">
                 Begin Setup Process
               </Button>
             </Link>
-            <Link href="/login">
-              <Button size="lg" variant="outline" className="h-12 px-8 text-sm w-full sm:w-auto hover:bg-white hover:text-black transition-all">
+            <Link href="/login" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="h-12 px-8 text-sm w-full hover:bg-white hover:text-black transition-all">
                 Access Live Demo
               </Button>
             </Link>
@@ -287,22 +287,22 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="w-full border-t border-white/5 bg-[#000000] pt-20 pb-10 px-6 md:px-20 relative z-10">
+      <footer className="w-full border-t border-white/5 bg-[#000000] pt-16 sm:pt-20 pb-8 sm:pb-10 px-4 sm:px-6 md:px-20 relative z-10 w-full overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5 border-b border-white/5 pb-16">
+          <div className="grid gap-10 md:gap-12 md:grid-cols-2 lg:grid-cols-5 border-b border-white/5 pb-12 sm:pb-16">
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-2 mb-6">
-                <GraduationCap className="h-6 w-6 text-white" />
-                <span className="text-2xl font-bold text-white tracking-tighter">UNIVERSE RMS</span>
+              <div className="flex items-center gap-2 mb-4 sm:mb-6">
+                <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                <span className="text-xl sm:text-2xl font-bold text-white tracking-tighter">UNIVERSE RMS</span>
               </div>
-              <p className="text-neutral-400 max-w-sm mb-8 leading-relaxed">
+              <p className="text-sm sm:text-base text-neutral-400 max-w-sm mb-8 leading-relaxed">
                 The gold standard in academic data management. Engineered for zero-latency, cryptographic security, and flawless institutional operations.
               </p>
             </div>
             
             <div>
-              <h4 className="text-white font-bold mb-6 tracking-tight">Platform</h4>
-              <ul className="space-y-4 text-sm text-neutral-400">
+              <h4 className="text-white font-bold mb-4 sm:mb-6 tracking-tight">Platform</h4>
+              <ul className="space-y-3 sm:space-y-4 text-sm text-neutral-400">
                 <li><Link href="/login" className="hover:text-white transition-colors">Student Portal</Link></li>
                 <li><Link href="/login" className="hover:text-white transition-colors">Educator Dashboard</Link></li>
                 <li><Link href="/login" className="hover:text-white transition-colors">Admin Console</Link></li>
@@ -311,8 +311,8 @@ export default function Home() {
             </div>
             
             <div>
-              <h4 className="text-white font-bold mb-6 tracking-tight">Resources</h4>
-              <ul className="space-y-4 text-sm text-neutral-400">
+              <h4 className="text-white font-bold mb-4 sm:mb-6 tracking-tight">Resources</h4>
+              <ul className="space-y-3 sm:space-y-4 text-sm text-neutral-400">
                 <li><Link href="#" className="hover:text-white transition-colors">Documentation</Link></li>
                 <li><Link href="#" className="hover:text-white transition-colors">API Reference</Link></li>
                 <li><Link href="#" className="hover:text-white transition-colors">Implementation Guide</Link></li>
@@ -321,8 +321,8 @@ export default function Home() {
             </div>
             
             <div>
-              <h4 className="text-white font-bold mb-6 tracking-tight">Company</h4>
-              <ul className="space-y-4 text-sm text-neutral-400">
+              <h4 className="text-white font-bold mb-4 sm:mb-6 tracking-tight">Company</h4>
+              <ul className="space-y-3 sm:space-y-4 text-sm text-neutral-400">
                 <li><Link href="#" className="hover:text-white transition-colors">About</Link></li>
                 <li><Link href="#" className="hover:text-white transition-colors">Contact</Link></li>
                 <li><Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link></li>
@@ -332,11 +332,11 @@ export default function Home() {
           </div>
           
           <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-neutral-600">
-            <p>© 2024 University Result Management System. All rights reserved.</p>
-            <div className="flex flex-wrap items-center justify-center gap-6">
-               <span className="flex items-center gap-2"><Lock className="h-3 w-3" /> AES-256 Encrypted</span>
-               <span className="flex items-center gap-2"><ShieldCheck className="h-3 w-3" /> SOC Type II Certified</span>
-               <span className="flex items-center gap-2"><Globe className="h-3 w-3" /> Global Edge Network</span>
+            <p className="text-center md:text-left">© 2024 University Result Management System. All rights reserved.</p>
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+               <span className="flex items-center gap-1.5 sm:gap-2"><Lock className="h-3 w-3" /> AES-256 Encrypted</span>
+               <span className="flex items-center gap-1.5 sm:gap-2"><ShieldCheck className="h-3 w-3" /> SOC Type II Certified</span>
+               <span className="flex items-center gap-1.5 sm:gap-2"><Globe className="h-3 w-3" /> Global Edge Network</span>
             </div>
           </div>
         </div>
