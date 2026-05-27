@@ -41,15 +41,18 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-neutral-50 px-4 relative">
-      <div className="absolute top-6 left-6">
+    <div className="flex min-h-screen items-center justify-center bg-black px-4 relative overflow-hidden">
+      <div className="absolute inset-0 z-0 texture-grid" />
+      <div className="absolute inset-0 z-0 texture-noise" />
+      
+      <div className="absolute top-6 left-6 z-10">
         <Link href="/">
-          <Button variant="ghost" className="text-neutral-500 hover:text-neutral-900 border border-transparent hover:border-neutral-200 bg-white shadow-sm hover:shadow">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
+          <Button variant="ghost" className="h-12 w-12 p-0 flex items-center justify-center text-neutral-400 hover:text-white border border-transparent hover:border-white/10 hover:bg-white/5 transition-all">
+            <ArrowLeft className="h-5 w-5" />
           </Button>
         </Link>
       </div>
-      <div className="w-full max-w-md py-12">
+      <div className="w-full max-w-md py-12 relative z-10">
         <Card>
           <div className="mb-8 text-center">
             <CardTitle className="text-3xl">Create Account</CardTitle>
@@ -83,18 +86,18 @@ export default function RegisterPage() {
               required
             />
 
-            <div className="space-y-1.5">
-              <label className="text-sm font-medium">I am a...</label>
+            <div className="space-y-2">
+              <label className="text-sm font-semibold text-neutral-300 tracking-tight">I am a...</label>
               <div className="grid grid-cols-3 gap-2">
                 {["STUDENT", "LECTURER", "ADMIN"].map((r) => (
                   <button
                     key={r}
                     type="button"
                     onClick={() => setFormData({ ...formData, role: r as UserRole })}
-                    className={`rounded-md border py-2 text-xs font-medium transition-all ${
+                    className={`rounded-xl border py-2.5 text-xs font-bold tracking-widest transition-all duration-200 ${
                       formData.role === r
-                        ? "bg-primary text-white border-primary"
-                        : "bg-white text-neutral-600 border-border hover:bg-neutral-50"
+                        ? "bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+                        : "bg-black/50 text-neutral-500 border-white/10 hover:bg-white/5 hover:text-neutral-300"
                     }`}
                   >
                     {r}
@@ -104,7 +107,7 @@ export default function RegisterPage() {
             </div>
 
             {error && (
-              <div className="rounded-md bg-red-50 p-3 text-sm font-medium text-red-600 border border-red-100">
+              <div className="rounded-xl bg-red-500/10 p-3 text-sm font-medium text-red-500 border border-red-500/20 text-center">
                 {error}
               </div>
             )}
@@ -114,9 +117,9 @@ export default function RegisterPage() {
             </Button>
           </form>
 
-          <div className="mt-6 text-center text-sm text-muted">
+          <div className="mt-8 text-center text-sm text-neutral-400">
             Already have an account?{" "}
-            <Link href="/login" className="font-semibold text-primary hover:underline">
+            <Link href="/login" className="font-semibold text-white hover:text-neutral-300 transition-colors">
               Sign In
             </Link>
           </div>

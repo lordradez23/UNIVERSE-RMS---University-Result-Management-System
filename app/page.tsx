@@ -147,28 +147,30 @@ export default function Home() {
         </section>
 
         {/* Tailored Experiences Section */}
-        <section id="university" className="mx-auto max-w-7xl px-6 py-24 border-t border-white/5">
-          <div className="mb-12 max-w-3xl">
-            <h2 className="text-2xl font-bold tracking-tight text-white mb-4">Purpose-built for every role.</h2>
-            <p className="text-base text-neutral-400 leading-relaxed">
+        <section id="university" className="mx-auto max-w-7xl px-6 py-24 border-t border-white/5 relative z-10">
+          <div className="mb-16 max-w-3xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-white mb-5">Purpose-built for every role.</h2>
+            <p className="text-base text-neutral-400 leading-relaxed md:text-lg max-w-2xl">
               UNIVERSE RMS is not a one-size-fits-all solution. Our platform adapts its interface dynamically, offering specialized portals designed to maximize efficiency for students, educators, and administrators alike.
             </p>
           </div>
-          <div className="grid gap-6 lg:grid-cols-3">
-            <div className="glass-card p-8 rounded-3xl border border-white/10 background-noise">
-              <BookOpen className="h-8 w-8 text-white mb-5" />
-              <h3 className="text-xl font-bold text-white mb-3">Student Portal</h3>
-              <p className="text-sm text-neutral-400">Visualize academic progress with intuitive results tables, grade-aware indicators, and instant access to performance analytics across semesters.</p>
+          <div className="grid gap-6 md:grid-cols-3 items-stretch">
+            <div className="bg-white/[0.02] p-8 rounded-3xl border border-white/10 hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300 flex flex-col justify-start h-full group">
+              <BookOpen className="h-7 w-7 text-white mb-6 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+              <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Student Portal</h3>
+              <p className="text-sm text-neutral-400 leading-relaxed flex-grow">Visualize academic progress with intuitive results tables, grade-aware indicators, and instant access to performance analytics across semesters.</p>
             </div>
-            <div className="glass-card p-8 rounded-3xl border border-white/10">
-              <Users className="h-8 w-8 text-white mb-5" />
-              <h3 className="text-xl font-bold text-white mb-3">Lecturer Dashboard</h3>
-              <p className="text-sm text-neutral-400">Streamline your workflow with effortless result uploads, bulk processing capabilities, and built-in validation for secure grade entry.</p>
+            
+            <div className="bg-white/[0.02] p-8 rounded-3xl border border-white/10 hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300 flex flex-col justify-start h-full group">
+              <Users className="h-7 w-7 text-white mb-6 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+              <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Lecturer Dashboard</h3>
+              <p className="text-sm text-neutral-400 leading-relaxed flex-grow">Streamline your workflow with effortless result uploads, bulk processing capabilities, and built-in validation for secure grade entry.</p>
             </div>
-            <div className="glass-card p-8 rounded-3xl border border-white/10">
-              <Database className="h-8 w-8 text-white mb-5" />
-              <h3 className="text-xl font-bold text-white mb-3">Admin Panel</h3>
-              <p className="text-sm text-neutral-400">Maintain complete system oversight with real-time analytics, user account management, and global record monitoring tools.</p>
+
+            <div className="bg-white/[0.02] p-8 rounded-3xl border border-white/10 hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300 flex flex-col justify-start h-full group">
+              <Database className="h-7 w-7 text-white mb-6 group-hover:scale-110 transition-transform duration-300" strokeWidth={1.5} />
+              <h3 className="text-xl font-bold text-white mb-4 tracking-tight">Admin Panel</h3>
+              <p className="text-sm text-neutral-400 leading-relaxed flex-grow">Maintain complete system oversight with real-time analytics, user account management, and global record monitoring tools.</p>
             </div>
           </div>
         </section>
