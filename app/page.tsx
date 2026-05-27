@@ -61,28 +61,67 @@ export default function Home() {
 
           {/* Floating UI Elements Preview */}
           <div className="relative mt-24 w-full max-w-5xl px-4 animate-float">
-            <div className="glass-card h-[400px] w-full relative overflow-hidden rounded-3xl border border-white/5">
+            <div className="glass-card w-full relative overflow-hidden rounded-3xl border border-white/5 bg-black/40">
               {/* Fake UI Content */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-transparent" />
-              <div className="p-8 flex flex-col gap-6">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/[0.02] to-transparent" />
+              <div className="p-8 flex flex-col gap-6 relative z-10">
                 <div className="flex items-center justify-between border-b border-white/5 pb-6">
-                  <div className="h-4 w-32 glass rounded-full" />
+                  <div className="flex items-center gap-3">
+                    <div className="h-2 w-2 rounded-full bg-white animate-pulse" />
+                    <div className="text-[10px] font-mono tracking-widest text-white/50 uppercase">Live System Feed</div>
+                  </div>
                   <div className="flex gap-2">
-                    <div className="h-2 w-2 rounded-full bg-neutral-700" />
-                    <div className="h-2 w-2 rounded-full bg-neutral-700" />
-                    <div className="h-2 w-2 rounded-full bg-neutral-700" />
+                    <div className="h-2 w-2 rounded-full bg-neutral-800" />
+                    <div className="h-2 w-2 rounded-full bg-neutral-800" />
+                    <div className="h-2 w-2 rounded-full bg-neutral-800" />
                   </div>
                 </div>
+                
                 <div className="grid grid-cols-4 gap-4">
-                  {[1, 2, 3, 4].map(i => (
-                    <div key={i} className="h-24 glass rounded-2xl animate-pulse" />
+                  {[
+                    { label: "Active Students", value: "8,492", w: "w-[85%]" },
+                    { label: "Processed Results", value: "34.2M", w: "w-[60%]" },
+                    { label: "System Load", value: "1.2%", w: "w-[12%]" },
+                    { label: "Network status", value: "Secure", w: "w-[100%]" }
+                  ].map((stat, i) => (
+                    <div key={i} className="h-24 glass rounded-2xl p-4 flex flex-col justify-between relative overflow-hidden group border border-white/5 bg-white/[0.01]">
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/[0.08] to-transparent -translate-x-full group-hover:animate-[shimmer_2s_infinite]" />
+                      <div className="text-[10px] text-neutral-500 font-mono uppercase tracking-widest">{stat.label}</div>
+                      <div className="text-2xl font-bold text-white tracking-tight">{stat.value}</div>
+                      <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden mt-1">
+                         <div className={`h-full bg-white opacity-90 ${stat.w}`} />
+                      </div>
+                    </div>
                   ))}
                 </div>
-                <div className="h-32 glass rounded-2xl animate-pulse" />
+                
+                <div className="h-48 glass rounded-2xl p-6 relative overflow-hidden border border-white/5 bg-white/[0.01]">
+                  <div className="text-[10px] text-neutral-500 font-mono uppercase tracking-widest mb-6 border-b border-white/5 pb-3">Recent Transaction Log</div>
+                  <div className="space-y-4">
+                    {[
+                      { id: "0xA92B...4F12", status: "Verified", time: "Just now", opacity: "opacity-100" },
+                      { id: "0xC71A...9B34", status: "Processed", time: "2s ago", opacity: "opacity-70" },
+                      { id: "0x2F88...E19C", status: "Encrypted", time: "5s ago", opacity: "opacity-40" }
+                    ].map((log, i) => (
+                      <div key={i} className={`flex justify-between items-center ${log.opacity}`}>
+                         <div className="flex gap-4 items-center">
+                           <div className="w-1.5 h-1.5 rounded-full bg-white/80" />
+                           <span className="text-sm text-neutral-300 font-mono tracking-tight">{log.id}</span>
+                         </div>
+                         <div className="flex gap-6 items-center">
+                           <span className="text-[10px] text-neutral-400 uppercase tracking-widest">{log.status}</span>
+                           <span className="text-[10px] text-neutral-600 font-mono w-16 text-right">{log.time}</span>
+                         </div>
+                      </div>
+                    ))}
+                  </div>
+                  {/* Scanning line effect */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.04] to-transparent h-[150%] w-full animate-[float_4s_linear_infinite]" />
+                </div>
               </div>
             </div>
             {/* Glossy Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent h-full w-full z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#000000] via-transparent to-transparent h-full w-full z-20 pointer-events-none" />
           </div>
         </section>
 
@@ -173,13 +212,55 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="glass-card rounded-3xl p-8 border border-white/5 h-[500px] flex items-center justify-center relative overflow-hidden">
+              <div className="glass-card rounded-3xl border border-white/5 h-[500px] flex flex-col relative overflow-hidden bg-black/40">
                 <div className="absolute inset-0 bg-grid-pattern opacity-5" />
-                <div className="relative z-10 text-center space-y-4">
-                  <Lock className="h-16 w-16 text-white mx-auto animate-pulse" />
-                  <div className="text-xl font-bold text-white tracking-widest uppercase">Encrypted</div>
-                  <div className="text-sm font-mono text-neutral-500">AES-256-GCM</div>
+                
+                {/* Simulated Ciphertext Stream */}
+                <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none flex flex-col pt-4">
+                   <div className="animate-[float_20s_linear_infinite] whitespace-break-spaces font-mono text-[10px] leading-[2] text-neutral-600 break-all px-8">
+                     {'0x8F92A 0x1B4E8 0x93C2A 0x44F01 0x7E2D9 0x55B1F 0x88C4D 0x3A9E2 0x1F2B4 0x7C9D1 0x5E4F8 0x2A1B3 0x9D8C7 0x6E5F4 0x3B2A1 '}
+                     {'0x4C8D9 0x1E7F2 0x5A3B4 0x9D6C8 0x2F1E5 0x7B4A3 0x8C9D2 0x3E5F1 0x6A7B8 0x2C4D9 0x1F3E5 0x9A8B7 0x4C5D6 0x3E2F1 0x7B8A9 '}
+                     {'0x5D6C7 0x2E3F4 0x8A9B1 0x1C2D3 0x9E8F7 0x4A5B6 0x3D2E1 0x7F8A9 0x6C5D4 0x2B3C4 0x1E5F6 0x8A9B7 0x3C4D5 0x9E8F1 0x2A3B4 '}
+                     {'0x8F92A 0x1B4E8 0x93C2A 0x44F01 0x7E2D9 0x55B1F 0x88C4D 0x3A9E2 0x1F2B4 0x7C9D1 0x5E4F8 0x2A1B3 0x9D8C7 0x6E5F4 0x3B2A1 '}
+                     {'0x4C8D9 0x1E7F2 0x5A3B4 0x9D6C8 0x2F1E5 0x7B4A3 0x8C9D2 0x3E5F1 0x6A7B8 0x2C4D9 0x1F3E5 0x9A8B7 0x4C5D6 0x3E2F1 0x7B8A9 '}
+                     {'0x5D6C7 0x2E3F4 0x8A9B1 0x1C2D3 0x9E8F7 0x4A5B6 0x3D2E1 0x7F8A9 0x6C5D4 0x2B3C4 0x1E5F6 0x8A9B7 0x3C4D5 0x9E8F1 0x2A3B4 '}
+                   </div>
                 </div>
+
+                <div className="relative z-10 flex-1 flex flex-col items-center justify-center p-8 mt-4">
+                  {/* Animated Rings around Lock */}
+                  <div className="relative flex items-center justify-center w-32 h-32 mb-10">
+                     <div className="absolute inset-0 border border-white/10 rounded-full border-t-white/60 animate-[spin_4s_linear_infinite]" />
+                     <div className="absolute inset-2 border border-white/5 rounded-full border-b-white/40 animate-[spin_3s_linear_infinite_reverse]" />
+                     <div className="absolute inset-4 bg-white/5 rounded-full animate-pulse blur-sm" />
+                     <Lock className="h-10 w-10 text-white relative z-10" />
+                  </div>
+                  
+                  <div className="text-xl font-bold text-white tracking-widest uppercase mb-3">Encrypted Tunnel</div>
+                  <div className="text-xs font-mono text-neutral-400 bg-white/5 px-4 py-1.5 rounded-md border border-white/10 shadow-inner">
+                    AES-256-GCM
+                  </div>
+                  
+                  {/* Connection Nodes */}
+                  <div className="mt-auto w-full pt-8 border-t border-white/5 flex items-center justify-between text-[10px] uppercase tracking-widest font-mono text-neutral-500">
+                     <div className="flex items-center gap-3">
+                       <div className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                       Client Node
+                     </div>
+                     <div className="flex-1 px-6 flex items-center justify-center relative overflow-hidden">
+                        <div className="w-full h-px bg-white/10" />
+                        <div className="absolute w-full h-px bg-white/50 -translate-x-full animate-[shimmer_2s_infinite]" />
+                     </div>
+                     <div className="flex items-center gap-3">
+                       <div className="w-2 h-2 rounded-full border border-white/40" />
+                       Core Server
+                     </div>
+                  </div>
+                </div>
+
+                {/* Dark Gradient Overlay to fade out edges */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/90 via-transparent to-transparent pointer-events-none z-20" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#000000_100%)] pointer-events-none z-20 opacity-90" />
               </div>
             </div>
           </div>
