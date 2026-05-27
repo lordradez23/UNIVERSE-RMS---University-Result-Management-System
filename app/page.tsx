@@ -307,12 +307,12 @@ export default function Home() {
 
 function FeatureCard({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) {
   return (
-    <div className="glass-card group hover:bg-white/[0.07] transition-all">
-      <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white text-black group-hover:scale-110 transition-transform duration-500">
+    <div className="glass-card p-10 rounded-3xl flex flex-col items-center text-center group hover:bg-white/[0.07] border border-white/5 transition-all duration-300">
+      <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white text-black group-hover:scale-110 shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-transform duration-500">
         {icon}
       </div>
-      <h3 className="text-xl font-bold text-white mb-3 tracking-tight">{title}</h3>
-      <p className="text-neutral-400 line-height-relaxed text-sm">{description}</p>
+      <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">{title}</h3>
+      <p className="text-neutral-400 leading-relaxed text-sm">{description}</p>
     </div>
   );
 }
