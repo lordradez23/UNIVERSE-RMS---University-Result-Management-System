@@ -286,18 +286,57 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="w-full border-t border-white/5 py-12 px-6 text-center md:px-20">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-7xl mx-auto">
-          <div className="flex items-center gap-2">
-            <GraduationCap className="h-6 w-6 text-white" />
-            <span className="font-bold text-white tracking-tighter">UNIVERSE RMS</span>
+      <footer className="w-full border-t border-white/5 bg-[#000000] pt-20 pb-10 px-6 md:px-20 relative z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5 border-b border-white/5 pb-16">
+            <div className="lg:col-span-2">
+              <div className="flex items-center gap-2 mb-6">
+                <GraduationCap className="h-6 w-6 text-white" />
+                <span className="text-2xl font-bold text-white tracking-tighter">UNIVERSE RMS</span>
+              </div>
+              <p className="text-neutral-400 max-w-sm mb-8 leading-relaxed">
+                The gold standard in academic data management. Engineered for zero-latency, cryptographic security, and flawless institutional operations.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="text-white font-bold mb-6 tracking-tight">Platform</h4>
+              <ul className="space-y-4 text-sm text-neutral-400">
+                <li><Link href="/login" className="hover:text-white transition-colors">Student Portal</Link></li>
+                <li><Link href="/login" className="hover:text-white transition-colors">Educator Dashboard</Link></li>
+                <li><Link href="/login" className="hover:text-white transition-colors">Admin Console</Link></li>
+                <li><Link href="/register" className="hover:text-white transition-colors">Institutional Setup</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-white font-bold mb-6 tracking-tight">Resources</h4>
+              <ul className="space-y-4 text-sm text-neutral-400">
+                <li><Link href="#" className="hover:text-white transition-colors">Documentation</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors">API Reference</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors">Implementation Guide</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors">System Status</Link></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="text-white font-bold mb-6 tracking-tight">Company</h4>
+              <ul className="space-y-4 text-sm text-neutral-400">
+                <li><Link href="#" className="hover:text-white transition-colors">About</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors">Contact</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+                <li><Link href="#" className="hover:text-white transition-colors">Terms of Service</Link></li>
+              </ul>
+            </div>
           </div>
-          <div className="text-sm text-neutral-500">
-            © 2024 University Result Management System. The Gold Standard for Institutions.
-          </div>
-          <div className="flex gap-6">
-            <Lock className="h-4 w-4 text-neutral-600 hover:text-white cursor-pointer transition-colors" />
-            <Globe className="h-4 w-4 text-neutral-600 hover:text-white cursor-pointer transition-colors" />
+          
+          <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-neutral-600">
+            <p>© 2024 University Result Management System. All rights reserved.</p>
+            <div className="flex flex-wrap items-center justify-center gap-6">
+               <span className="flex items-center gap-2"><Lock className="h-3 w-3" /> AES-256 Encrypted</span>
+               <span className="flex items-center gap-2"><ShieldCheck className="h-3 w-3" /> SOC Type II Certified</span>
+               <span className="flex items-center gap-2"><Globe className="h-3 w-3" /> Global Edge Network</span>
+            </div>
           </div>
         </div>
       </footer>
