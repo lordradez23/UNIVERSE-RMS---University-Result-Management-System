@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/components/shared/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "danger";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "danger" | "glass";
   size?: "sm" | "md" | "lg";
   isLoading?: boolean;
 }
@@ -10,17 +10,18 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = "primary", size = "md", isLoading, children, disabled, ...props }, ref) => {
     const variants = {
-      primary: "bg-primary text-secondary hover:bg-neutral-800",
-      secondary: "bg-secondary text-primary border border-primary hover:bg-neutral-100",
-      outline: "border border-border bg-transparent hover:bg-neutral-100 text-primary",
-      ghost: "bg-transparent hover:bg-neutral-100 text-primary",
-      danger: "bg-red-600 text-white hover:bg-red-700",
+      primary: "bg-white text-black hover:bg-neutral-200 shadow-[0_0_20px_rgba(255,255,255,0.1)]",
+      secondary: "bg-neutral-900 text-white border border-neutral-800 hover:bg-neutral-800",
+      outline: "border border-neutral-800 bg-transparent hover:bg-neutral-900 text-white",
+      ghost: "bg-transparent hover:bg-white/5 text-white",
+      danger: "bg-red-600/10 text-red-500 border border-red-600/20 hover:bg-red-600/20",
+      glass: "glass hover:bg-white/10 text-white shadow-xl",
     };
 
     const sizes = {
-      sm: "h-8 px-3 text-xs",
-      md: "h-10 px-4 py-2",
-      lg: "h-12 px-8 text-lg",
+      sm: "h-9 px-4 text-xs",
+      md: "h-11 px-6 text-sm",
+      lg: "h-14 px-10 text-base",
     };
 
     return (
@@ -28,7 +29,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         disabled={disabled || isLoading}
         className={cn(
-          "inline-flex items-center justify-center rounded-md font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98]",
+          "inline-flex items-center justify-center rounded-full font-semibold tracking-tight transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.96]",
           variants[variant],
           sizes[size],
           className
